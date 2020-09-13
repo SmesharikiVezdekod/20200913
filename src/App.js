@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import View from "@vkontakte/vkui/dist/components/View/View";
+import Group from "@vkontakte/vkui/dist/components/Group/Group";
+import Header from "@vkontakte/vkui/dist/components/Header/Header";
+import PanelHeader from "@vkontakte/vkui/dist/components/PanelHeader/PanelHeader";
+import Panel from "@vkontakte/vkui/dist/components/Panel/Panel";
+import Cell from "@vkontakte/vkui/dist/components/Cell/Cell";
+import Button from "@vkontakte/vkui/dist/components/Button/Button";
+import '@vkontakte/vkui/dist/vkui.css';
+import Text from "@vkontakte/vkui/dist/components/Typography/Text/Text";
+import Placeholder from "@vkontakte/vkui/dist/components/Placeholder/Placeholder";
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <View activePanel="main">
+            <Panel id="main">
+                <PanelHeader>Целевой сбор</PanelHeader>
+                <Placeholder
+                    stretched={true}
+                    action={<Button>Создать сбор</Button>}
+                    header={<Text>У вас пока нет сборов. <br/> Начните доброе дело.</Text>} />
+            </Panel>
+        </View>
+    );
 }
 
 export default App;
