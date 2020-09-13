@@ -20,7 +20,7 @@ function App() {
                 <Placeholder
                     stretched={true}
                     action={<Button>Создать сбор</Button>}
-                    header={<Text>У вас пока нет сборов. <br/> Начните доброе дело.</Text>} />
+                    header={<Text weight={"regular"}>У вас пока нет сборов. <br/> Начните доброе дело.</Text>} />
             </Panel>
         </View>
     );
